@@ -1,0 +1,28 @@
+--create a store database
+
+CREATE TABLE storefront (id INTEGER PRIMARY KEY, name TEXT, color TEXT, availablesizes TEXT, cost INTEGER, inventoryavailable INTEGER);
+
+INSERT INTO storefront VALUES (1, 'leggings', 'black', 'S M L XL', '25.99', '50');
+INSERT INTO storefront VALUES (2, 'leggings', 'red', 'S M L XL', '25.99', '50');
+INSERT INTO storefront VALUES (3, 'leggings', 'gray', 'S M L XL', '25.99', '50');
+INSERT INTO storefront VALUES (4, 'leggings', 'pink', 'S M L XL', '25.99', '50');
+INSERT INTO storefront VALUES (5, 'leggings', 'green', 'S M L XL', '25.99', '50');
+INSERT INTO storefront VALUES (6, 'leggings', 'blue', 'S M L XL', '25.99', '50');
+INSERT INTO storefront VALUES (7, 'leggings', 'purple', 'S M L XL', '25.99', '50');
+INSERT INTO storefront VALUES (8, 'leggings', 'yellow', 'S M L XL', '25.99', '50');
+INSERT INTO storefront VALUES (9, 'leggings', 'orange', 'S M L XL', '25.99', '50');
+INSERT INTO storefront VALUES (10, 'leggings', 'white', 'S M L XL', '25.99', '50');
+INSERT INTO storefront VALUES (11, 'croptop', 'black', 'S M L XL', '12.99', '50');
+INSERT INTO storefront VALUES (12, 'croptop', 'white', 'S M L XL', '12.99', '50');
+INSERT INTO storefront VALUES (13, 'croptop', 'gray', 'S M L XL', '12.99', '50');
+INSERT INTO storefront VALUES (14, 'croptop', 'blue', 'S M L XL', '12.99', '50');
+INSERT INTO storefront VALUES (15, 'croptop', 'green', 'S M L XL', '12.99', '50');
+
+--display store order by cost
+SELECT * FROM storefront WHERE cost < 20 ORDER BY cost;
+
+--which items are black?
+SELECT * FROM storefront WHERE color = "black" ORDER by cost;
+
+--what is the sum of the costs?
+SELECT SUM(COST) FROM STOREFRONT
