@@ -1,0 +1,20 @@
+/* Create table about the people and what they do here */
+CREATE TABLE singers (id INTEGER PRIMARY KEY, name TEXT, age INTEGER, hometown TEXT);
+
+INSERT INTO singers (name, age, hometown) VALUES ("Beyonce Knowles", "43", "Houston,Texas");
+INSERT INTO singers (name, age, hometown) VALUES ("Janet Jackson", "60","Gary Indiana");
+INSERT INTO singers (name, age, hometown) VALUES ("Usher", "45", "Chattanooga,TN");
+INSERT INTO singers (name, age, hometown) VALUES ("Mariah Carey", "49", "Huntington,NY");
+
+CREATE TABLE debutalbum (id INTEGER PRIMARY KEY, title TEXT, year INTEGER);
+INSERT INTO debutalbum VALUES (1, "Dangerously In Love", 2003); 
+INSERT INTO debutalbum VALUES (2, "Janet Jackson", 1982);
+INSERT INTO debutalbum VALUES (3, "Usher", 1994);
+INSERT INTO debutalbum VALUES (4, "Mariah Carey", 1990);
+
+SELECT singers.name,debutalbum.title, debutalbum.year from singers
+join debutalbum
+ON debutalbum.id=singers.id
+ORDER BY year desc;
+
+SELECT name, age from singers Order by age
